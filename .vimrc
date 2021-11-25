@@ -8,8 +8,8 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-call plug#begin('~/.vim/plugged')
-call plug#end()
+" call plug#begin('~/.vim/plugged')
+" call plug#end()
 
 set nocompatible
 set encoding=utf8
