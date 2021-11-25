@@ -1,9 +1,12 @@
 autoload -Uz compinit
 compinit
 
-autoload -Uz promptinit
-promptinit
-prompt fade yellow white blue
+local color=yellow
+export PS1="%B%F{$color}%K{black}╭─%F{$color}%b◥%B%F{white}%K{$color} %n@%m %F{$color}%K{black}%b◣%B %1(j.⋄ .)%D %* %0(?..%F{red}[%?])
+%F{$color}╰╢%~/%k%f%b "
+export PS2='> '
+export PS3='?# '
+export PS4='+%N:%i> '
 
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
