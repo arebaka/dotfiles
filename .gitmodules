@@ -1,0 +1,3 @@
+[submodule ".vim/kissvim"]
+	path = .vim/kissvim
+	url = https://github.com/arebaka/kissvim.git
