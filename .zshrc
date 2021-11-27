@@ -1,8 +1,38 @@
 autoload -Uz compinit
 compinit
 
+local parse_git_branch() {
+	local branch=`git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+
+	if [ -z $branch ]
+	then
+		echo ''
+	else
+		local stat=`git status -s | wc -l`
+
+		if [[ $stat == 0 ]]
+		then
+			echo "╲ $branch "
+		else
+			echo "╲ $branch +$stat "
+		fi
+	fi
+}
+
+setopt auto_param_slash
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt emacs
+setopt prompt_subst
+
+unsetopt menu_complete
+unsetopt share_history
+unsetopt correct
+unsetopt correct_all
+
 local color=yellow
-export PS1="%B%F{$color}%K{black}╭─%F{$color}%b◥%B%F{white}%K{$color} %n@%m %F{$color}%K{black}%b◣%B %1(j.⋄ .)%D %* %0(?..%F{red}[%?])
+
+export PS1="%B%F{$color}%K{black}╭─%F{$color}%b◥%B%F{white}%K{$color} %n@%m \`parse_git_branch\`%F{$color}%K{black}%b◣%B %1(j.⋄ .)%D %* %0(?..%F{red}[%?])
 %F{$color}╰╢%~/%k%f%b "
 export PS2='> '
 export PS3='?# '
@@ -11,18 +41,6 @@ export PS4='+%N:%i> '
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
-
-setopt auto_param_slash
-setopt hist_ignore_dups
-setopt hist_ignore_space
-setopt emacs
-
-unsetopt menu_complete
-unsetopt share_history
-unsetopt correct
-unsetopt correct_all
-
-plugins=(git zsh-syntax-highlighting)
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -100,13 +118,13 @@ alias gd='git diff --color | less -R'
 alias gdc='git diff --color --cached | less -R'
 alias gf='git fetch'
 alias gl='git log --color | less -R'
-alias glo='git log --color --oneline | less -R'
+alias glo='git log --color --oneline'
 alias gls='git log --color --stat | less -R'
 alias glg='git log --color --graph | less -R'
-alias glos='git log --color --oneline --stat | less -R'
-alias glog='git log --color --oneline --graph | less -R'
+alias glos='git log --color --oneline --stat'
+alias glog='git log --color --oneline --graph'
 alias glsg='git log --color --stat --graph | less -R'
-alias glosg='git log --color --oneline --stat --graph | less -R'
+alias glosg='git log --color --oneline --stat --graph'
 alias gm='git merge'
 alias gp='git push'
 alias gpt='git push --tags'
