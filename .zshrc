@@ -1,7 +1,7 @@
 autoload -Uz compinit
 compinit
 
-local parse_git_branch() {
+parse_git_branch() {
 	local branch=`git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 
 	if [ -z $branch ]
@@ -30,13 +30,13 @@ unsetopt share_history
 unsetopt correct
 unsetopt correct_all
 
-local color=yellow
+COLOR=`cat ~/.color 2>/dev/null || echo green`
 
-export PS1="%B%F{$color}%k╭─%F{$color}%b◥%B%F{white}%K{$color} %n@%m \`parse_git_branch\`%F{$color}%k%b◣%B %1(j.⋄ .)%D %* %0(?..%F{red}[%?])
-%F{$color}╰╢%~/%k%f%b "
-export PS2='> '
-export PS3='?# '
-export PS4='+%N:%i> '
+export PS1="%B%F{\$COLOR}%k╭─%F{\$COLOR}%b◥%B%F{white}%K{\$COLOR} %n@%m \`parse_git_branch\`%F{\$COLOR}%k%b◣%B %1(j.⋄ .)%D{%c} %0(?..%F{red}[%?])
+%F{\$COLOR}╰╢%~/%f%b "
+export PS2="%B%F{\$COLOR}%k> %f%b"
+export PS3="%B%F{\$COLOR}%k?# %f%b"
+export PS4="%B%F{\$COLOR}%k+%N:%i> %f%b"
 
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
