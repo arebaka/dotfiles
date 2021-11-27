@@ -32,7 +32,7 @@ unsetopt correct_all
 
 local color=yellow
 
-export PS1="%B%F{$color}%K{black}╭─%F{$color}%b◥%B%F{white}%K{$color} %n@%m \`parse_git_branch\`%F{$color}%K{black}%b◣%B %1(j.⋄ .)%D %* %0(?..%F{red}[%?])
+export PS1="%B%F{$color}%k╭─%F{$color}%b◥%B%F{white}%K{$color} %n@%m \`parse_git_branch\`%F{$color}%k%b◣%B %1(j.⋄ .)%D %* %0(?..%F{red}[%?])
 %F{$color}╰╢%~/%k%f%b "
 export PS2='> '
 export PS3='?# '
