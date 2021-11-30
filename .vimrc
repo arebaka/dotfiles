@@ -41,7 +41,8 @@ filetype on
 filetype plugin on
 
 set keymap=russian-jcukenwin
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+set iminsert=0
+set imsearch=0
 
 source ~/.vim/kissvim/kissvim.vim
 

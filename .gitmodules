@@ -1,3 +1,6 @@
 [submodule ".vim/kissvim"]
 	path = .vim/kissvim
 	url = https://github.com/arebaka/kissvim.git
+[submodule ".zsh/plugins/zsh-syntax-highlighting"]
+	path = .zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

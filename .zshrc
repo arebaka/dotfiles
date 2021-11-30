@@ -5,16 +5,13 @@ parse_git_branch() {
 	local branch=`git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 
 	if [ -z $branch ]
-	then
-		echo ''
+	then echo ''
 	else
 		local stat=`git status -s | wc -l`
 
 		if [[ $stat == 0 ]]
-		then
-			echo "╲ $branch "
-		else
-			echo "╲ $branch +$stat "
+		then echo "╲ $branch "
+		else echo "╲ $branch ±$stat "
 		fi
 	fi
 }
@@ -30,17 +27,22 @@ unsetopt share_history
 unsetopt correct
 unsetopt correct_all
 
+HISTFILE=~/.zsh_history
+HISTSIZE=5000
+SAVEHIST=5000
+
 COLOR=`cat ~/.color 2>/dev/null || echo green`
 
-export PS1="%B%F{\$COLOR}%k╭─%F{\$COLOR}%b◥%B%F{white}%K{\$COLOR} %n@%m \`parse_git_branch\`%F{\$COLOR}%k%b◣%B %1(j.⋄ .)%D{%c} %0(?..%F{red}[%?])
-%F{\$COLOR}╰╢%~/%f%b "
+export PS1="%B%F{\$COLOR}%k╭─%F{\$COLOR}%b◥%B%F{white}%K{\$COLOR} %n@%m \`parse_git_branch\`%F{\$COLOR}%k%b◣%B %1(j.¤ .)%D{%c} %0(?..%F{red}[%?])
+%F{\$COLOR}╰╢%~%f%b "
 export PS2="%B%F{\$COLOR}%k> %f%b"
 export PS3="%B%F{\$COLOR}%k?# %f%b"
 export PS4="%B%F{\$COLOR}%k+%N:%i> %f%b"
 
-HISTFILE=~/.zsh_history
-HISTSIZE=5000
-SAVEHIST=5000
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -r *' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+. ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -59,7 +61,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export EDITOR=vi
+export EDITOR=vim
 export PAGER=less
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 export LANG=ru_RU.UTF-8
@@ -74,6 +76,8 @@ alias ls='ls -F --color=auto'
 alias la='ls -Fa --color=auto'
 alias ll='ls -FlhX --color=auto'
 alias lla='ls -FlahX --color=auto'
+
+alias lns='ln -s'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -135,7 +139,7 @@ alias gr='git remote'
 alias gra='git remote add'
 alias gR='git reset'
 alias gRh='git reset --hard'
-alias gss='git status -M'
+alias gss='git status -sM'
 alias gssb='git status -sbM'
 alias gsh='git show'
 alias gt='git tag'
