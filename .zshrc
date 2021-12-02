@@ -21,45 +21,49 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt emacs
 setopt prompt_subst
+setopt always_to_end
+setopt list_packed
+setopt list_types
+setopt append_history
+setopt extended_history
 
 unsetopt menu_complete
 unsetopt share_history
 unsetopt correct
 unsetopt correct_all
+unsetopt always_last_prompt
+unsetopt auto_menu
 
 HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
-COLOR=`cat ~/.color 2>/dev/null || echo green`
-
-export PS1="%B%F{\$COLOR}%k╭─%F{\$COLOR}%b◥%B%F{white}%K{\$COLOR} %n@%m \`parse_git_branch\`%F{\$COLOR}%k%b◣%B %1(j.¤ .)%D{%c} %0(?..%F{red}[%?])
-%F{\$COLOR}╰╢%~%f%b "
-export PS2="%B%F{\$COLOR}%k> %f%b"
-export PS3="%B%F{\$COLOR}%k?# %f%b"
-export PS4="%B%F{\$COLOR}%k+%N:%i> %f%b"
-
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -r *' 'fg=white,bold,bg=red')
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
-. ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
+#zstyle ':completion:*' auto-description 'specify: %d'
+#zstyle ':completion:*' completer _expand _complete _correct _approximate
+#zstyle ':completion:*' format 'Completing %d'
+#zstyle ':completion:*' group-name ''
+#zstyle ':completion:*' menu select=2
+#zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+#zstyle ':completion:*' list-colors ''
+#zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+#zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+#zstyle ':completion:*' menu select=long
+#zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+#zstyle ':completion:*' use-compctl false
+#zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+bindkey -e
+bindkey '\e[1;5C' forward-word            # ctrl-right
+bindkey '\e[1;5D' backward-word           # ctrl-left
+bindkey '\e[2~'   overwrite-mode          # insert
+bindkey '\e[3~'   delete-char             # delete
+bindkey '\e[5~'   history-search-backward # page up
+bindkey '\e[6~'   history-search-forward  # page down
+bindkey '\e[1~'   beginning-of-line       # home
+bindkey '\e[4~'   end-of-line             # end
 
 export EDITOR=vim
 export PAGER=less
@@ -67,8 +71,6 @@ export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 export LANG=ru_RU.UTF-8
 export BLOCKSIZE=Mb
 export LESSCHARSET=UTF-8
-
-eval "$(dircolors -b)"
 
 alias c='clear'
 
@@ -86,7 +88,6 @@ alias fgrep='fgrep --color=auto'
 alias df='df -Th --total'
 alias dfa='df -Th --total'
 alias du='du -ach -d1 | sort -h'
-
 
 alias findn='find . -name'
 alias findf='find . -type f'
@@ -156,3 +157,19 @@ alias npms='npm start'
 alias npmt='npm test'
 alias npmu='npm update'
 alias npmv='npm -v'
+
+COLOR=green
+
+export PS1="%B%F{\$COLOR}%k╭─%F{\$COLOR}%b◥%B%F{white}%K{\$COLOR} %n@%m \`parse_git_branch\`%F{\$COLOR}%k%b◣%B %1(j.¤ .)%D{%c} %0(?..%F{red}[%?])
+%F{\$COLOR}╰╢%~%f%b "
+export PS2="%B%F{\$COLOR}%k> %f%b"
+export PS3="%B%F{\$COLOR}%k?# %f%b"
+export PS4="%B%F{\$COLOR}%k+%N:%i> %f%b"
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -r *' 'fg=white,bold,bg=red')
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+. ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(dircolors -b)"
+. ~/.profile 2>/dev/null  # replace the $COLOR if you want
