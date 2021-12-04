@@ -1,0 +1,13 @@
+( command -v firefox   && exec firefox   ) 2>/dev/null ||
+( command -v chromium  && exec chromium  ) 2>/dev/null ||
+( command -v opera     && exec opera     ) 2>/dev/null ||
+( command -v vivaldi   && exec vivaldi   ) 2>/dev/null ||
+( command -v epiphany  && exec epiphany  ) 2>/dev/null ||
+( command -v midori    && exec midori    ) 2>/dev/null ||
+( command -v falkon    && exec falkon    ) 2>/dev/null ||
+( command -v konqueror && exec konqueror ) 2>/dev/null ||
+( command -v min       && exec min       ) 2>/dev/null ||
+( command -v elinks    && exec elinks    ) 2>/dev/null ||
+( command -v links     && exec links     ) 2>/dev/null ||
+( command -v lynx      && exec lynx      ) 2>/dev/null ||
+return 127

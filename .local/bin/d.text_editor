@@ -1,0 +1,11 @@
+( command -v mousepad   && exec mousepad   ) 2>/dev/null ||
+( command -v notepadqq  && exec notepadqq  ) 2>/dev/null ||
+( command -v gedit      && exec gedit      ) 2>/dev/null ||
+( command -v featherpad && exec featherpad ) 2>/dev/null ||
+( command -v subl       && exec subl       ) 2>/dev/null ||
+( command -v leafpad    && exec leafpad    ) 2>/dev/null ||
+( command -v xed        && exec xed        ) 2>/dev/null ||
+( command -v vim        && exec vim        ) 2>/dev/null ||
+( command -v emacs      && exec emacs      ) 2>/dev/null ||
+( command -v nano       && exec nano       ) 2>/dev/null ||
+return 127

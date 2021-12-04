@@ -1,0 +1,12 @@
+( command -v subl     && exec subl     ) 2>/dev/null ||
+( command -v code     && exec code     ) 2>/dev/null ||
+( command -v atom     && exec atom     ) 2>/dev/null ||
+( command -v kate     && exec kate     ) 2>/dev/null ||
+( command -v brackets && exec brackets ) 2>/dev/null ||
+( command -v bluefish && exec bluefish ) 2>/dev/null ||
+( command -v mousepad && exec mousepad ) 2>/dev/null ||
+( command -v gedit    && exec gedit    ) 2>/dev/null ||
+( command -v vim      && exec vim      ) 2>/dev/null ||
+( command -v emacs    && exec emacs    ) 2>/dev/null ||
+( command -v nano     && exec nano     ) 2>/dev/null ||
+return 127

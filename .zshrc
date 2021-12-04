@@ -104,12 +104,14 @@ alias findde='find . -type d -empty'
 
 alias free='free -ht'
 
+alias diff='diff --color=always'
+
 alias histg='history|grep'
 
 alias ps='ps u'
 alias psa='ps au'
 alias psx='ps ux'
-alias psax='ps '
+alias psax='ps aux'
 alias psg='ps aux | grep'
 
 alias ga='git add'
@@ -119,17 +121,17 @@ alias gc='git commit -m'
 alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gC='git clone'
-alias gd='git diff --color | less -R'
-alias gdc='git diff --color --cached | less -R'
+alias gd='git diff'
+alias gdc='git diff --cached'
 alias gf='git fetch'
-alias gl='git log --color | less -R'
-alias glo='git log --color --oneline'
-alias gls='git log --color --stat | less -R'
-alias glg='git log --color --graph | less -R'
-alias glos='git log --color --oneline --stat'
-alias glog='git log --color --oneline --graph'
-alias glsg='git log --color --stat --graph | less -R'
-alias glosg='git log --color --oneline --stat --graph'
+alias gl='git log'
+alias glo='git log --oneline'
+alias gls='git log --stat'
+alias glg='git log --graph'
+alias glos='git log --oneline --stat'
+alias glog='git log --oneline --graph'
+alias glsg='git log --stat --graph'
+alias glosg='git log --oneline --stat --graph'
 alias gm='git merge'
 alias gp='git push'
 alias gpt='git push --tags'
@@ -158,7 +160,7 @@ alias npmt='npm test'
 alias npmu='npm update'
 alias npmv='npm -v'
 
-COLOR=green
+export COLOR=${COLOR:-black}
 
 export PS1="%B%F{\$COLOR}%k╭─%F{\$COLOR}%b◥%B%F{white}%K{\$COLOR} %n@%m \`parse_git_branch\`%F{\$COLOR}%k%b◣%B %1(j.¤ .)%D{%c} %0(?..%F{red}[%?])
 %F{\$COLOR}╰╢%~%f%b "
@@ -172,4 +174,3 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 . ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(dircolors -b)"
-. ~/.profile 2>/dev/null  # replace the $COLOR if you want
