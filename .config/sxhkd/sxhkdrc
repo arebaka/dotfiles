@@ -14,14 +14,14 @@ super + Escape
 super + Delete
 	xkill
 # lock the screen
-super + Backspace
+super + BackSpace
 	d.screen_locker
 
 # restart bspwm
 ctrl + alt + Escape
 	bspc wm -r
 # quit bspwm
-ctrl + alt + Backspace
+ctrl + alt + BackSpace
 	bspc quit
 # shutdown
 ctrl + alt + Delete
