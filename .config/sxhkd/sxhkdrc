@@ -46,7 +46,7 @@ super + Home
 # set keyboard layout
 super + 1
 	setxkbmap ru
-suerp + 2
+super + 2
 	setxkbmap ua
 super + 0
 	setxkbmap us
