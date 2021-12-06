@@ -1,0 +1,111 @@
+# menu
+#super
+#	d.menu
+# terminal
+super + Return
+	d.terminal_emulator
+# program launcher
+super + space
+	d.launcher
+# reload sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+# xkill
+super + Delete
+	xkill
+# lock the screen
+super + Backspace
+	d.screen_locker
+
+# restart bspwm
+ctrl + alt + Escape
+	bspc wm -r
+# quit bspwm
+ctrl + alt + Backspace
+	bspc quit
+# shutdown
+ctrl + alt + Delete
+	shutdown now
+# focus the desktop
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev,next}
+# select the desktop
+ctrl + alt + {1-9,0}
+	bspc desktop -f {1-9,10}
+
+# focus the node
+alt + {_,shift + } Tab
+	bspc node -f {next,prev}
+# focus/swap the node in the given direction
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+# swap the current node and the biggest window
+super + Home
+	bspc node -s biggest.window
+
+# set keyboard layout
+super + 1
+	setxkbmap ru
+suerp + 2
+	setxkbmap ua
+super + 0
+	setxkbmap us
+
+# close/kill
+alt + {_,super + }F4
+	bspc node -{c,k}
+# alternate between the tiled and monocle layout
+alt + F5
+	bspc desktop -l next
+# tiled
+alt + F10
+	bspc node -t tiled
+# fullscreen
+alt + F11
+	bspc node -t fullscreen
+# floating
+alt + F12
+	bspc node -t floating
+# F1 - help
+# F2 - run
+# F3 - search
+
+# set the window state
+ctrl + alt + {t,super + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# set the node flags
+ctrl + alt + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+# focus the node for the given path jump
+ctrl + alt + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# programs
+super + c
+	d.calendar
+super + shift + c
+	d.calculator
+super + d
+	d.download_manager
+super + e
+	d.text_editor
+super + shift + e
+	d.code_editor
+super + f
+	d.file_manager
+super + i
+	d.image_editor
+super + m
+	d.media_center
+super + shift + M
+	d.im_client
+super + n
+	d.notebook
+super + s
+	d.system_monitor
+super + t
+	d.terminal_emulator
+super + v
+	d.video_editor
+super + w
+	d.web_browser

@@ -1,0 +1,2 @@
+( command -v telegram-desktop && exec telegram-desktop ) 2>/dev/null ||
+return 127
