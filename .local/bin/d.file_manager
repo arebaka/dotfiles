@@ -1,17 +1,18 @@
-( command -v nemo           && exec nemo           ) 2>/dev/null ||
-( command -v dolphin        && exec dolphin        ) 2>/dev/null ||
-( command -v thunar         && exec thunar         ) 2>/dev/null ||
-( command -v nautilus       && exec nautilus       ) 2>/dev/null ||
-( command -v pantheon-files && exec pantheon-files ) 2>/dev/null ||
-( command -v pcmanfm        && exec pcmanfm        ) 2>/dev/null ||
-( command -v deepin         && exec deepin         ) 2>/dev/null ||
-( command -v polo           && exec polo           ) 2>/dev/null ||
-( command -v caja           && exec caja           ) 2>/dev/null ||
-( command -v xfe            && exec xfe            ) 2>/dev/null ||
-( command -v mc             && exec mc             ) 2>/dev/null ||
-( command -v lf             && exec lf             ) 2>/dev/null ||
-( command -v ranger         && exec ranger         ) 2>/dev/null ||
-( command -v vifm           && exec vifm           ) 2>/dev/null ||
-( command -v nnn            && exec nnn            ) 2>/dev/null ||
-return 127
+exec 2>/dev/null
 
+( command -v nemo           && exec nemo           ) ||
+( command -v dolphin        && exec dolphin        ) ||
+( command -v thunar         && exec thunar         ) ||
+( command -v nautilus       && exec nautilus       ) ||
+( command -v pantheon-files && exec pantheon-files ) ||
+( command -v pcmanfm        && exec pcmanfm        ) ||
+( command -v deepin         && exec deepin         ) ||
+( command -v polo           && exec polo           ) ||
+( command -v caja           && exec caja           ) ||
+( command -v xfe            && exec xfe            ) ||
+( command -v mc             && exec mc             ) ||
+( command -v lf             && exec lf             ) ||
+( command -v ranger         && exec ranger         ) ||
+( command -v vifm           && exec vifm           ) ||
+( command -v nnn            && exec nnn            ) ||
+return 127

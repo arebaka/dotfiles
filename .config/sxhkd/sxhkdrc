@@ -35,7 +35,9 @@ ctrl + alt + {1-9,0}
 
 # focus the node
 alt + {_,shift + } Tab
-	bspc node -f {next,prev}
+	bspc wm -h off; \
+	bspc node -f {older,newer}; \
+	bspc wm -h on
 # focus/swap the node in the given direction
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}

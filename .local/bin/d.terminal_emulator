@@ -1,10 +1,12 @@
-( command -v kitty          && exec kitty          ) 2>/dev/null ||
-( command -v xfce4-terminal && exec xfce4-terminal ) 2>/dev/null ||
-( command -v gnome-terminal && exec gnome-terminal ) 2>/dev/null ||
-( command -v konsole        && exec konsole        ) 2>/dev/null ||
-( command -v terminator     && exec terminator     ) 2>/dev/null ||
-( command -v qterminal      && exec qterminal      ) 2>/dev/null ||
-( command -v xterm          && exec xterm          ) 2>/dev/null ||
-( command -v tmux           && exec tmux           ) 2>/dev/null ||
-( command -v screen         && exec screen         ) 2>/dev/null ||
+exec 2>/dev/null
+
+( command -v kitty          && exec kitty          ) ||
+( command -v xfce4-terminal && exec xfce4-terminal ) ||
+( command -v gnome-terminal && exec gnome-terminal ) ||
+( command -v konsole        && exec konsole        ) ||
+( command -v terminator     && exec terminator     ) ||
+( command -v qterminal      && exec qterminal      ) ||
+( command -v xterm          && exec xterm          ) ||
+( command -v tmux           && exec tmux           ) ||
+( command -v screen         && exec screen         ) ||
 return 127

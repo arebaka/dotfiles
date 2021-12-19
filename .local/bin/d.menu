@@ -1,2 +1,4 @@
-( command -v dmenu_run && exec dmenu_run ) 2>/dev/null ||
+exec 2>/dev/null
+
+( command -v dmenu_run && exec dmenu_run ) ||
 return 127
