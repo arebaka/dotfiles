@@ -12,4 +12,23 @@ then
 	unset f
 fi
 
+for i in /usr/share/fonts/*
+do xset +fp $i
+done
+
+xrdb merge .Xresources
+fc-cache -fv
+
+xset fp rehash
+xset b off
+xset c on
+xset +dpms
+xset k
+xset led on
+xset r on
+
+xsetroot -cursor_name left_ptr &
+xfsettingsd &
+setxkbmap -option grp:alt_shift_toggle us,ru &
+
 [[ $1 ]] && exec $1

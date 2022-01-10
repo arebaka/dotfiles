@@ -40,6 +40,9 @@ syntax on
 filetype on
 filetype plugin on
 
+autocmd InsertEnter * set cul
+autocmd InsertLeave * set nocul
+
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0

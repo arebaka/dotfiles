@@ -1,4 +1,8 @@
-exec 2>/dev/null
+#!/bin/bash
 
-( command -v dmenu_run && exec dmenu_run ) ||
-return 127
+for cmd in \
+dmenu_run
+do command -v $cmd &>/dev/null && exec $cmd
+done
+
+exit 127

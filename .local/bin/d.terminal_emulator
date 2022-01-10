@@ -1,12 +1,16 @@
-exec 2>/dev/null
+#!/bin/bash
 
-( command -v kitty          && exec kitty          ) ||
-( command -v xfce4-terminal && exec xfce4-terminal ) ||
-( command -v gnome-terminal && exec gnome-terminal ) ||
-( command -v konsole        && exec konsole        ) ||
-( command -v terminator     && exec terminator     ) ||
-( command -v qterminal      && exec qterminal      ) ||
-( command -v xterm          && exec xterm          ) ||
-( command -v tmux           && exec tmux           ) ||
-( command -v screen         && exec screen         ) ||
-return 127
+for cmd in \
+kitty \
+xfce4-terminal \
+gnome-terminal \
+konsole \
+terminator \
+qterminal \
+xterm \
+tmux \
+screen
+do command -v $cmd &>/dev/null && exec $cmd
+done
+
+exit 127

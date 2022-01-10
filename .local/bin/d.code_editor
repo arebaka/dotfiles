@@ -1,14 +1,18 @@
-exec 2>/dev/null
+#!/bin/bash
 
-( command -v subl     && exec subl     ) ||
-( command -v code     && exec code     ) ||
-( command -v atom     && exec atom     ) ||
-( command -v kate     && exec kate     ) ||
-( command -v brackets && exec brackets ) ||
-( command -v bluefish && exec bluefish ) ||
-( command -v mousepad && exec mousepad ) ||
-( command -v gedit    && exec gedit    ) ||
-( command -v vim      && exec vim      ) ||
-( command -v emacs    && exec emacs    ) ||
-( command -v nano     && exec nano     ) ||
-return 127
+for cmd in \
+subl \
+code \
+atom \
+kate \
+brackets \
+bluefish \
+mousepad \
+gedit \
+vim \
+emacs \
+nano
+do command -v $cmd &>/dev/null && exec $cmd
+done
+
+exit 127

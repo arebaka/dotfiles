@@ -1,7 +1,8 @@
 #!/bin/bash
 
 for cmd in \
-telegram-desktop
+picom \
+compton
 do command -v $cmd &>/dev/null && exec $cmd
 done
 

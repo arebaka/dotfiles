@@ -1,15 +1,19 @@
-exec 2>/dev/null
+#!/bin/bash
 
-( command -v firefox   && exec firefox   ) ||
-( command -v chromium  && exec chromium  ) ||
-( command -v opera     && exec opera     ) ||
-( command -v vivaldi   && exec vivaldi   ) ||
-( command -v epiphany  && exec epiphany  ) ||
-( command -v midori    && exec midori    ) ||
-( command -v falkon    && exec falkon    ) ||
-( command -v konqueror && exec konqueror ) ||
-( command -v min       && exec min       ) ||
-( command -v elinks    && exec elinks    ) ||
-( command -v links     && exec links     ) ||
-( command -v lynx      && exec lynx      ) ||
-return 127
+for cmd in \
+firefox \
+chromium \
+opera \
+vivaldi \
+epiphany \
+midori \
+falkon \
+konqueror \
+min \
+elinks \
+links \
+lynx
+do command -v $cmd &>/dev/null && exec $cmd
+done
+
+exit 127

@@ -38,20 +38,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
-#zstyle ':completion:*' auto-description 'specify: %d'
-#zstyle ':completion:*' completer _expand _complete _correct _approximate
-#zstyle ':completion:*' format 'Completing %d'
-#zstyle ':completion:*' group-name ''
-#zstyle ':completion:*' menu select=2
-#zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-#zstyle ':completion:*' list-colors ''
-#zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-#zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-#zstyle ':completion:*' menu select=long
-#zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-#zstyle ':completion:*' use-compctl false
-#zstyle ':completion:*' verbose true
-
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
@@ -73,6 +59,8 @@ export BLOCKSIZE=Mb
 export LESSCHARSET=UTF-8
 
 alias c='clear'
+alias f='fg'
+alias b='bg'
 
 alias ls='ls -F --color=auto'
 alias la='ls -Fa --color=auto'
@@ -82,31 +70,31 @@ alias lla='ls -FlahX --color=auto'
 alias lns='ln -s'
 
 alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+alias egr='egrep --color=auto'
+alias fgr='fgrep --color=auto'
 
 alias df='df -Th --total'
 alias dfa='df -Th --total'
 alias du='du -ach -d1 | sort -h'
 
-alias findn='find . -name'
-alias findf='find . -type f'
-alias findd='find . -type d'
-alias findp='find . -perm'
-alias findu='find . -user'
-alias findg='find . -group'
-alias finda='find . -atime'
-alias findm='find . -mtime'
-alias findc='find . -cmin'
-alias finds='find . -size'
-alias findfe='find . -type f -empty'
-alias findde='find . -type d -empty'
+alias fnn='find . -name'
+alias fnf='find . -type f'
+alias fnd='find . -type d'
+alias fnp='find . -perm'
+alias fnu='find . -user'
+alias fng='find . -group'
+alias fna='find . -atime'
+alias fnm='find . -mtime'
+alias fnc='find . -cmin'
+alias fns='find . -size'
+alias fnfe='find . -type f -empty'
+alias fnde='find . -type d -empty'
 
 alias free='free -ht'
 
 alias diff='diff --color=always'
 
-alias histg='history|grep'
+alias histg='history 0 | grep'
 
 alias ps='ps u'
 alias psa='ps au'

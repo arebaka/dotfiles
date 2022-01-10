@@ -1,18 +1,22 @@
-exec 2>/dev/null
+#!/bin/bash
 
-( command -v nemo           && exec nemo           ) ||
-( command -v dolphin        && exec dolphin        ) ||
-( command -v thunar         && exec thunar         ) ||
-( command -v nautilus       && exec nautilus       ) ||
-( command -v pantheon-files && exec pantheon-files ) ||
-( command -v pcmanfm        && exec pcmanfm        ) ||
-( command -v deepin         && exec deepin         ) ||
-( command -v polo           && exec polo           ) ||
-( command -v caja           && exec caja           ) ||
-( command -v xfe            && exec xfe            ) ||
-( command -v mc             && exec mc             ) ||
-( command -v lf             && exec lf             ) ||
-( command -v ranger         && exec ranger         ) ||
-( command -v vifm           && exec vifm           ) ||
-( command -v nnn            && exec nnn            ) ||
-return 127
+for cmd in \
+nemo \
+dolphin \
+thunar \
+nautilus \
+pantheon-files \
+pcmanfm \
+deepin \
+polo \
+caja \
+xfe \
+mc \
+lf \
+ranger \
+vifm \
+nnn
+do command -v $cmd &>/dev/null && exec $cmd
+done
+
+exit 127
