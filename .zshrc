@@ -62,6 +62,8 @@ alias c='clear'
 alias f='fg'
 alias b='bg'
 
+alias vi='vim'
+
 alias ls='ls -F --color=auto'
 alias la='ls -Fa --color=auto'
 alias ll='ls -FlhX --color=auto'
@@ -102,6 +104,8 @@ alias psx='ps ux'
 alias psax='ps aux'
 alias psg='ps aux | grep'
 
+alias backup='rsync -auvz'
+
 alias ga='git add'
 alias gaa='git add --all'
 alias gb='git branch'
@@ -110,7 +114,9 @@ alias gch='git checkout'
 alias gchb='git checkout -b'
 alias gC='git clone'
 alias gd='git diff'
+alias gds='git diff --stat --summary'
 alias gdc='git diff --cached'
+alias gdcs='git diff --cached --stat --summary'
 alias gf='git fetch'
 alias gl='git log'
 alias glo='git log --oneline'
@@ -156,9 +162,8 @@ export PS2="%B%F{\$COLOR}%k> %f%b"
 export PS3="%B%F{\$COLOR}%k?# %f%b"
 export PS4="%B%F{\$COLOR}%k+%N:%i> %f%b"
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -r *' 'fg=white,bold,bg=red')
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 . ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -r*' 'fg=white,bold,bg=red')
 
 eval "$(dircolors -b)"
