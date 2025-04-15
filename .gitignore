@@ -30,6 +30,10 @@
 !/.config/sxhkd
 !/.config/hypr
 
+!/.gtkrc-2.0
+!/.config/gtk-3.0
+!/.config/gtk-4.0
+
 !/.config/htop
 !/.config/btop
 !/.config/btop/btop.conf
