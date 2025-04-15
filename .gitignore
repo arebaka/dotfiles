@@ -34,9 +34,10 @@
 !/.config/gtk-3.0
 !/.config/gtk-4.0
 
+!/.config/bat
 !/.config/htop
 !/.config/btop
-!/.config/btop/btop.conf
+/.config/btop/btop.log
 !/.config/neofetch
 !/.config/kitty
 !/.config/rofi

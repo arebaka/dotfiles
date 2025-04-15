@@ -11,3 +11,5 @@
 	smudge = git-lfs smudge -- %f
 [pull]
 	ff = only
+[diff]
+	ignoreSubmodules = dirty

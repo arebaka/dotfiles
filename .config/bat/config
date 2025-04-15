@@ -1,0 +1,12 @@
+--theme="TwoDark"
+
+--binary=no-printing
+--italic-text=always
+--paging=always
+--pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"
+--style=full
+
+--ignored-suffix ".old"
+
+--map-syntax "*.ino:C++"
+--map-syntax ".ignore:Git Ignore"
