@@ -1,0 +1,16 @@
+[pyprland]
+plugins = [
+  "monitors",
+  "scratchpads",
+  "magnify",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "~/.script/app/drop_terminal_emulator.sh"
+class = "kitty-dropterm"
+size = "70% 60%"
+position = "15% 30px"
+multi = false
+pinned = true
+lazy = false
