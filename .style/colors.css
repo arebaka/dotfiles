@@ -1,0 +1,25 @@
+@define-color color0 #000000;
+@define-color color1 #ff0000;
+@define-color color2 #00ff00;
+@define-color color3 #ffff00;
+@define-color color4 #0000ff;
+@define-color color5 #ff00ff;
+@define-color color6 #00ffff;
+@define-color color7 #ffffff;
+
+@define-color text-color @color7;
+@define-color fg-color #7d80b8;
+@define-color bg-color #181825;
+@define-color accent-text-color @color7;
+@define-color accent-fg-color #a5a9f3;
+@define-color accent-bg-color #1e1e2e;
+@define-color insensitive-text-color #60628d;
+@define-color insensitive-fg-color #4e4e63;
+@define-color insensitive-bg-color #11111b;
+@define-color extra-text-color @color7;
+@define-color extra-fg-color #f3e4a5;
+@define-color extra-bg-color #232438;
+@define-color success-color #7db890;
+@define-color warning-color #b8ac79;
+@define-color error-color #b87e7d;
+@define-color alert-color #b87e7d;

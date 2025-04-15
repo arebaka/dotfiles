@@ -20,6 +20,9 @@
 !/.vim
 /.vim/.netrwhist
 
+!/.style
+!/.script
+
 !/.config
 /.config/*
 
