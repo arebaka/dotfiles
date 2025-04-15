@@ -3,7 +3,7 @@
 	name = arelive
 [core]
 	editor = vim
-	pager = less 
+	pager = less
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
