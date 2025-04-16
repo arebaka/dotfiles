@@ -42,5 +42,6 @@
 !/.config/btop
 /.config/btop/btop.log
 !/.config/neofetch
+!/.config/waybar
 !/.config/kitty
 !/.config/rofi

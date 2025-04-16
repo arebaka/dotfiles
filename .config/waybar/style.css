@@ -1,0 +1,254 @@
+@import url('../../.style/colors.css');
+
+* {
+	margin: 0;
+	padding: 0;
+	background: none 0 0 no-repeat;
+	border: none;
+	text-shadow: none;
+	box-shadow: none;
+	font-family: Roboto Regular, sans-serif, monospace;
+	font-size: 12px;
+}
+
+window#waybar {
+    background: @transparent;
+    color: @text-color;
+}
+
+tooltip {
+	background: @bg-color;
+	border: 1px solid @fg-color;
+	border-radius: 5px;
+}
+
+tooltip {
+	color: @text-color;
+}
+
+.module {
+	background: @bg-color;
+	border-bottom: 1px solid @fg-color;
+}
+
+label.module {
+	padding: 0 7px;
+	min-width: 24px;
+	min-height: 28px;
+}
+
+label.module:hover {
+	background: @accent-bg-color;
+	border-color: @accent-fg-color;
+}
+
+#image,
+#user image {
+	border-radius: 50%;
+}
+
+#user:hover,
+#custom-username:hover {
+	color: @accent-fg-color;
+	background-color: @accent-bg-color;
+	border-color: @accent-fg-color;
+}
+
+#user label,
+#custom-username {
+	padding: 0 10px;
+	font-weight: bold;
+}
+
+#workspaces {
+	margin-right: 10px;
+	border: 1px solid @fg-color;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#workspaces button {
+	padding: 0 7px;
+	color: @text-color;
+}
+
+#workspaces button.active {
+	color: @fg-color;
+}
+
+#workspaces button:hover {
+	background-color: @accent-bg-color;
+}
+
+#session {
+	margin-right: 10px;
+	border-right: 5px solid @fg-color;
+	border-bottom-right-radius: 5px;
+}
+
+#session .module {
+	border-radius: 0;
+}
+
+#custom-poweroff,
+#custom-reboot {
+	color: @alert-color;
+}
+
+#custom-lock,
+#custom-suspend {
+	color: @warning-color;
+}
+
+#custom-logout,
+#custom-hibernate {
+	color: @success-color;
+}
+
+#custom-distro {
+	font-size: 24px;
+}
+
+#tray {
+	margin-right: 10px;
+	border: 1px solid @fg-color;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#tray menu {
+	padding: 5px 0;
+	color: @text-color;
+	background: @bg-color;
+	border: 1px solid @fg-color;
+	border-radius: 5px;
+}
+
+#tray > .active:hover,
+#tray > .passive:hover {
+	background: @accent-bg-color;
+}
+
+#tray image {
+	padding: 0 7px;
+}
+
+#window {
+	background: transparent;
+	border: none;
+}
+
+#window label {
+	font-size: 11px;
+}
+
+#language {
+	border-left: 1px solid @fg-color;
+	border-bottom-left-radius: 5px;
+}
+
+#clock {
+	border-right: 1px solid @fg-color;
+	border-bottom-right-radius: 5px;
+}
+
+#mpris {
+	font-size: 11px;
+	background: transparent;
+	border: none;
+}
+
+#custom-weather {
+	margin: 0 10px;
+	border: 1px solid @fg-color;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#tray > .needs-attention {
+	border-color: @alert-color;
+}
+
+#privacy {
+	background-color: @alert-color;
+}
+
+#battery.good,
+#battery.charging {
+	color: @success-color;
+}
+
+#battery.low {
+	color: @warning-color;
+}
+
+#battery.critical {
+	color: @alert-color;
+}
+
+#battery.charging {
+	color: @success-color;
+}
+
+#memory.good {
+	color: @success-color;
+}
+
+#memory.high {
+	color: @warning-color;
+}
+
+#memory.critical {
+	color: @alert-color;
+}
+
+#cpu.good {
+	color: @success-color;
+}
+
+#cpu.high {
+	color: @warning-color;
+}
+
+#cpu.critical {
+	color: @alert-color;
+}
+
+#temperature {
+	color: @success-color;
+}
+
+#temperature.critical {
+	color: @alert-color;
+}
+
+#disk.good {
+	color: @success-color;
+}
+
+#disk.high {
+	color: @warning-color;
+}
+
+#disk.critical {
+	color: @alert-color;
+}
+
+#pulseaudio {
+	border-left: 1px solid @fg-color;
+	border-bottom-left-radius: 5px;
+}
+
+#network {
+	border-right: 1px solid @fg-color;
+	border-bottom-right-radius: 5px;
+}
+
+#custom-notificator {
+	margin-left: 10px;
+	border-left: 1px solid @fg-color;
+	border-bottom-left-radius: 5px;
+}
