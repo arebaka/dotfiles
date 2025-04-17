@@ -45,5 +45,6 @@
 !/.config/tmux
 
 !/.config/waybar
+!/.config/dunst
 !/.config/kitty
 !/.config/rofi
