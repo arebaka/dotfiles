@@ -5,4 +5,4 @@ if [ `pamixer --get-volume` == 0 ]; then
 	pamixer -m
 fi
 
-~/.script/osd/volume.sh
+~/.script/osd/audio_volume.sh

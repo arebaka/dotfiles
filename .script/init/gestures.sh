@@ -1,2 +1,2 @@
 #!/bin/bash
-exec fusuma
+sleep 1; exec fusuma &> ~/test.txt

@@ -5,4 +5,4 @@ if [ `pamixer --get-mute` == 'true' ]; then
 fi
 pamixer --allow-boost --set-limit 100 -i 2
 
-~/.script/osd/volume.sh
+~/.script/osd/audio_volume.sh
