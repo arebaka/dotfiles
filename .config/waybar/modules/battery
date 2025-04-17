@@ -1,0 +1,26 @@
+{
+	"battery": {
+		"design-capacity": false,
+		"interval": 5,
+		"states": {
+			"full": 100,
+			"good": 80,
+			"low": 20,
+			"critical": 5
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "󰚥 {capacity}%",
+		"format-critical": "󰂃 {capacity}%",
+		"format-charging-critical": "󰂄 {capacity}%",
+		"format-time": "{H} h {M} m",
+		"format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"rotate": 0,
+		"tooltip": true,
+		"tooltip-format": "{time}, ({cycles} cycles, health {health}%)",
+		"tooltip-format-charging": "{power}W ({cycles} cycles, health {health}%)",
+		"tooltip-format-plugged": "{power}W ({cycles} cycles, health {health}%)",
+		"weighted-average": false,
+		"bat-compatibility": false
+	}
+}

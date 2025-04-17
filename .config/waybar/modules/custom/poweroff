@@ -1,0 +1,10 @@
+{
+	"custom/poweroff": {
+		"format": "󰤆",
+		"rotate": 0,
+		"on-click": "~/.script/acpi/poweroff.sh",
+		"escape": false,
+		"tooltip": true,
+		"tooltip-format": "Shutdown"
+	}
+}

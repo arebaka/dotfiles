@@ -7,13 +7,13 @@
 	border: none;
 	text-shadow: none;
 	box-shadow: none;
-	font-family: Roboto Regular, sans-serif, monospace;
+	font-family: Roboto, sans-serif, monospace;
 	font-size: 12px;
 }
 
 window#waybar {
-    background: @transparent;
-    color: @text-color;
+	background: @transparent;
+	color: @text-color;
 }
 
 tooltip {
@@ -27,14 +27,16 @@ tooltip {
 }
 
 .module {
+	margin-top: 10px;
 	background: @bg-color;
+	border-top: 1px solid @fg-color;
 	border-bottom: 1px solid @fg-color;
 }
 
 label.module {
 	padding: 0 7px;
 	min-width: 24px;
-	min-height: 28px;
+	min-height: 30px;
 }
 
 label.module:hover {
@@ -63,9 +65,7 @@ label.module:hover {
 #workspaces {
 	margin-right: 10px;
 	border: 1px solid @fg-color;
-	border-top: none;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-radius: 15px;
 }
 
 #workspaces button {
@@ -82,12 +82,18 @@ label.module:hover {
 }
 
 #session {
-	margin-right: 10px;
+	margin: 10px;
+	margin-bottom: 0;
+	min-height: 30px;
 	border-right: 5px solid @fg-color;
-	border-bottom-right-radius: 5px;
+	border-left: 5px solid @fg-color;
+	border-radius: 5px;
 }
 
 #session .module {
+	margin: 0;
+	border-top: 1px solid @fg-color;
+	border-bottom: 1px solid @fg-color;
 	border-radius: 0;
 }
 
@@ -113,9 +119,7 @@ label.module:hover {
 #tray {
 	margin-right: 10px;
 	border: 1px solid @fg-color;
-	border-top: none;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-radius: 15px;
 }
 
 #tray menu {
@@ -146,12 +150,14 @@ label.module:hover {
 
 #language {
 	border-left: 1px solid @fg-color;
-	border-bottom-left-radius: 5px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
 
 #clock {
 	border-right: 1px solid @fg-color;
-	border-bottom-right-radius: 5px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 #mpris {
@@ -161,11 +167,10 @@ label.module:hover {
 }
 
 #custom-weather {
-	margin: 0 10px;
+	margin: 10px;
+	margin-bottom: 0;
 	border: 1px solid @fg-color;
-	border-top: none;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-radius: 15px;
 }
 
 #tray > .needs-attention {
@@ -239,16 +244,19 @@ label.module:hover {
 
 #pulseaudio {
 	border-left: 1px solid @fg-color;
-	border-bottom-left-radius: 5px;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
 
 #network {
 	border-right: 1px solid @fg-color;
-	border-bottom-right-radius: 5px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 #custom-notificator {
-	margin-left: 10px;
-	border-left: 1px solid @fg-color;
-	border-bottom-left-radius: 5px;
+	margin: 10px;
+	margin-bottom: 0;
+	border: 1px solid @fg-color;
+	border-radius: 15px;
 }

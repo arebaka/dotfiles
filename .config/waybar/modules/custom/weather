@@ -1,0 +1,11 @@
+{
+	"custom/weather": {
+		"exec": "~/.script/network/weather.sh",
+		"return-type": "json",
+		"restart-interval": 3600,
+		"format": "{}°C",
+		"rotate": 0,
+		"escape": false,
+		"tooltip": true
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"custom/gpu": {
+		"exec-if": "/sys/class/hwmon/hwmon2/device/gpu_busy_percent",
+		"exec": "cat /sys/class/hwmon/hwmon2/device/gpu_busy_percent",
+		"interval": 1,
+		"format": "GPU: {}%",
+		"rotate": 0,
+		"escape": false,
+		"tooltip": false
+	}
+}

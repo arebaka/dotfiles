@@ -1,0 +1,41 @@
+{
+	"hyprland/window": {
+		"format": "{title}",
+		"separate-outputs": false,
+		"icon": true,
+		"icon-size": 20,
+		"rewrite": {
+			"": "<span foreground='#89b4fa'> </span> Hyprland",
+			"rofi - (.*)": "$1",
+			"sh": "  sh",
+			"bash": "  bash",
+			"zsh": " zsh",
+			"python": "<span foreground='#3d75a4'>󰌠 </span> Python",
+			"python (.*)": "<span foreground='#3d75a4'>󰌠 </span> $1",
+			"node": "<span foreground='#7eb766'>󰎙 </span> Node.js",
+			"node (.*)": "<span foreground='#7eb766'>󰎙 </span> $1",
+			"npm": "<span foreground='#7eb766'>󰎙 </span> npm",
+			"npm (.*)": "<span foreground='#7eb766'>󰎙 </span> $1",
+			"npx": "<span foreground='#7eb766'>󰎙 </span> npx",
+			"npx (.*)": "<span foreground='#7eb766'>󰎙 </span> $1",
+			"vim": "<span foreground='#a6e3a1'> </span> Vim",
+			"vim (.*)": "<span foreground='#a6e3a1'> </span> $1",
+			"nvim": "<span foreground='#a6e3a1'> </span> Neovim",
+			"nvim (.*)": "<span foreground='#a6e3a1'> </span> $1",
+			"vi": "<span foreground='#a6e3a1'> </span> Vim",
+			"vi (.*)": "<span foreground='#a6e3a1'> </span> $1",
+			"tmux": "<span foreground='#a6e3a1'> </span> tmux",
+			"tmux new -s (.*)": "<span foreground='#a6e3a1'> </span> $1",
+			"tmux a -t (.*)": "<span foreground='#a6e3a1'> </span> $1",
+			"(.*) — Mozilla Firefox": "$1",
+			"(.*) - Google Chrome": "$1",
+			"(.*) - Sublime Text": "$1",
+			"(.*) - Sublime Text (UNREGISTERED)": "$1",
+			"(.*) - Visual Studio Code": "$1",
+			"(.*) - Visual Studio Code - OSS": "$1",
+			"(.*) - mpv": "$1",
+			"(.*) - VLC media player": "$1",
+			"(.*) - Медиапроигрыватель VLC": "$1"
+		}
+	}
+}

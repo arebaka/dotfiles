@@ -1,0 +1,19 @@
+{
+	"network": {
+		"interface": "wlan0",
+		"interval": 60,
+		"family": "ipv4",
+		"format": "{icon}",
+		"format-ethernet": "󰈀 ",
+		"format-wifi": "󰖩  {signalStrength}%",
+		"format-linked": "󰛳",
+		"format-disconnected": "󰖪 ",
+		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+		"rotate": 0,
+		"tooltip": true,
+		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+		"tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} via {gwaddr}",
+		"tooltip-format-wifi": "{essid}: {ipaddr}/{cidr}",
+		"tooltip-format-disconnected": "Disconnected"
+	}
+}

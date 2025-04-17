@@ -1,0 +1,19 @@
+{
+	"include": [
+		"~/.config/waybar/modules/memory",
+		"~/.config/waybar/modules/disk",
+		"~/.config/waybar/modules/temperature",
+		"~/.config/waybar/modules/cpu"
+	],
+
+	"group/resources": {
+		"orientation": "inherit",
+		"modules": ["memory", "disk", "temperature", "cpu"],
+		"drawer": {
+			"transition-duration": 500,
+			"transition-left-to-right": false,
+			"children-class": "resource",
+			"click-to-reveal": false
+		}
+	}
+}

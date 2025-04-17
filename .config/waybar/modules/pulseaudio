@@ -1,0 +1,42 @@
+{
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "󰂰 {volume}%",
+		"format-bluetooth-muted": "󰗿",
+		"format-muted": "󰝟",
+		"format-icons": {
+			"default": ["󰕿", "󰖀", "󰕾"],
+			"default-muted": "󰸈",
+			"headphone": ["󰋋"],
+			"headphone-muted": "󰟎",
+			"speaker": ["󰕿", "󰖀", "󰕾"],
+			"speaker-muted": "󰸈",
+			"hdmi": ["󰕿", "󰖀", "󰕾"],
+			"htmi-muted": "󰸈",
+			"headset": ["󰋎"],
+			"headset-muted": "󰋐",
+			"hands-free": ["󰋋"],
+			"hands-free-muted": "󰟎",
+			"portable": ["󰓃"],
+			"portable-muted": "󰓄",
+			"car": ["󰕿", "󰖀", "󰕾"],
+			"car-muted": "󰸈",
+			"hifi": ["󰕿", "󰖀", "󰕾"],
+			"hifi-muted": "󰸈",
+			"phone": ["󰏲"],
+			"phone-muted": "󰸈"
+		},
+		"rotate": 0,
+		"states": [],
+		"scroll-step": 1.0,
+		"on-click-right": "~/.script/audio/toggle_mute.sh",
+		"on-scroll-up": "~/.script/audio/raise_volume.sh",
+		"on-scroll-down": "~/.script/audio/lower_volume.sh",
+		"tooltip": true,
+		"tooltip-format": "{desc}",
+		"max-volume": 100,
+		"ignored-sinks": [],
+		"reverse-scrolling": true,
+		"reverse-mouse-scrolling": true
+	}
+}

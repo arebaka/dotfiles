@@ -1,0 +1,14 @@
+{
+	"cpu": {
+		"interval": 2,
+		"format": "󰘚 {icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+		"rotate": 0,
+		"states": {
+			"good": 0,
+			"high": 75,
+			"critical": 90
+		},
+		"tooltip": true
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"clock": {
+		"inverval": 60,
+		"format": "{:%H:%M}",
+		"timezones": [],
+		"locale": "ru_RU.UTF-8",
+		"rotate": 0,
+		"tooltip": true,
+		"tooltip-format": "<big>{:%A}</big>\n<small><tt>{calendar}</tt></small>",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"on-click": "mode",
+			"format": {
+				"months": "<b>{}</b>",
+				"days": "{}",
+				"weeks": " <i>{:%W}</i>",
+				"weekdays": "<b>{}</b>",
+				"today": "<u>{}</u>"
+			}
+		},
+		"actions": {
+			"on-click": "mode",
+			"on-click-middle": "reset",
+			"on-click-forward": "tz_up",
+			"on-click-backward": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+	}
+}

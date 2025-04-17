@@ -1,0 +1,29 @@
+{
+	"mpris": {
+		"format": "<big>{status_icon}</big> {dynamic}",
+		"format-paused": "<big>{status_icon}</big> <i>{dynamic}</i>",
+		"format-stopped": "<big>{status_icon}</big> <i>{dynamic}</i>",
+		"tooltip": true,
+		"tooltip-format": "{player_icon} {dynamic} ({status})",
+		"player-icons": {
+			"default": "󰐊",
+			"mpv": "",
+			"vlc": "󰕼",
+			"firefox": "",
+			"TelegramDesktop": ""
+		},
+		"status-icons": {
+			"playing": "󰐊",
+			"paused": "󰏤",
+			"stopped": "󰓛"
+		},
+		"dynamic-order": ["title", "artist", "album"],
+		"ellipsis": "…",
+		"dynamic-len": 40,
+		"dynamic-separator": " - ",
+		"dynamic-importance-order": ["title", "artist", "album"],
+		"ignored-players": [],
+		"on-click": "~/.script/player/play-pause.sh",
+		"on-click-right": "~/.script/player/next_track.sh"
+	}
+}

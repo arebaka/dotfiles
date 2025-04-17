@@ -1,0 +1,10 @@
+{
+	"custom/logout": {
+		"format": "󰍃",
+		"rotate": 0,
+		"on-click": "~/.script/session/logout.sh",
+		"escape": false,
+		"tooltip": true,
+		"tooltip-format": "Log out"
+	}
+}

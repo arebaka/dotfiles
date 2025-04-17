@@ -9,6 +9,5 @@ dbus-monitor path='/org/freedesktop/Notifications',interface='org.freedesktop.DB
 		else
 			CLASS="enabled"
 		fi
-		echo $CLASS > ~/test.txt
 		printf '{"text": "%s", "class": "%s", "alt": "%s"}\n' "$COUNT" "$CLASS" "$CLASS"
 	done

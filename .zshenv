@@ -29,13 +29,13 @@ export CALCHISTFILE="$XDG_CACHE_HOME"/calc_history
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export CONAN_USER_HOME="$XDG_CONFIG_HOME"
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export DOCKER_CONFIG="$HOME"/.docker
 export ELINKS_CONFDIR="$XDG_CONFIG_HOME"/elinks
 export GEM_HOME="$XDG_DATA_HOME"/gem
 export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
+export XCURSOR_PATH=/usr/share/icons:$HOME/.icons
 export IPYTHONDIR="$XDG_CONFIG_HOME"/ipython
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 export KDEHOME="$XDG_CONFIG_HOME"/kde
@@ -58,6 +58,6 @@ export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
 export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
 
-export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
-export ANDROID_HOME="$XDG_DATA_HOME"/android/sdk
+export ANDROID_USER_HOME="$HOME"/.android
+export ANDROID_HOME="$HOME"/.android/sdk
 

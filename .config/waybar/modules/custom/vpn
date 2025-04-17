@@ -1,0 +1,9 @@
+{
+	"custom/vpn": {
+		"format": "VPN ",
+		"return-type": "json",
+		"interval": 5,
+		"exec": "echo '{\"class\": \"connected\"}'",
+		"exec-if": "test -d /proc/sys/net/ipv4/conf/tun0"
+	}
+}

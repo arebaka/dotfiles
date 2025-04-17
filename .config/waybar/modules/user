@@ -1,0 +1,12 @@
+{
+	"user": {
+		"inverval": 60,
+		"format": "{user}",
+		"avatar": "$HOME/.face",
+		"width": 30,
+		"height": 30,
+		"icon": true,
+		"open-on-click": true,
+		"open-path": "$HOME"
+	}
+}

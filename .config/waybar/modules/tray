@@ -1,0 +1,8 @@
+{
+	"tray": {
+		"icon-size": 14,
+		"show-passive-icons": true,
+		"spacing": 5,
+		"reverse-direction": true
+	}
+}

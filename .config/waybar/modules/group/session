@@ -1,0 +1,21 @@
+{
+	"include": [
+		"~/.config/waybar/modules/custom/poweroff",
+		"~/.config/waybar/modules/custom/lock",
+		"~/.config/waybar/modules/custom/logout",
+		"~/.config/waybar/modules/custom/reboot",
+		"~/.config/waybar/modules/custom/suspend",
+		"~/.config/waybar/modules/custom/hibernate"
+	],
+
+	"group/session": {
+		"orientation": "inherit",
+		"modules": ["custom/poweroff", "custom/lock", "custom/logout", "custom/reboot", "custom/suspend", "custom/hibernate"],
+		"drawer": {
+			"transition-duration": 500,
+			"transition-left-to-right": true,
+			"children-class": "button",
+			"click-to-reveal": false
+		}
+	}
+}

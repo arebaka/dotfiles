@@ -1,0 +1,10 @@
+{
+	"custom/reboot": {
+		"format": "󰑓",
+		"rotate": 0,
+		"on-click": "~/.script/acpi/reboot.sh",
+		"escape": false,
+		"tooltip": true,
+		"tooltip-format": "Restart"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"custom/lock": {
+		"format": "󰌾",
+		"rotate": 0,
+		"on-click": "~/.script/session/lock.sh",
+		"escape": false,
+		"tooltip": true,
+		"tooltip-format": "Lock"
+	}
+}

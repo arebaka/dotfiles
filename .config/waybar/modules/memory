@@ -1,0 +1,12 @@
+{
+	"memory": {
+		"interval": 1,
+		"format": "󰍛 {}%",
+		"format-critical": "󰍛 {}% ",
+		"states": {
+			"good": 0,
+			"high": 75,
+			"critical": 90
+		}
+	}
+}

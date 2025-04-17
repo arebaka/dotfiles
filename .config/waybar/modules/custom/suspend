@@ -1,0 +1,10 @@
+{
+	"custom/suspend": {
+		"format": "󰤄",
+		"rotate": 0,
+		"on-click": "~/.script/acpi/suspend.sh",
+		"escape": false,
+		"tooltip": true,
+		"tooltip-format": "Sleep"
+	}
+}

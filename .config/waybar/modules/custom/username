@@ -1,0 +1,10 @@
+{
+	"custom/username": {
+		"format": {},
+		"exec": "whoami",
+		"interval": "once",
+		"rotate": 0,
+		"escape": false,
+		"tooltip": false
+	}
+}

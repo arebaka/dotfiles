@@ -1,0 +1,58 @@
+{
+	"hyprland/workspaces": {
+		"active-only": false,
+		"all-outputs": false,
+		"format": "{icon} <sub>{windows}</sub>",
+		"format-windows-separator": " ",
+		"format-icons": {
+			"term": "",
+			"web": "󰖟",
+			"code": "󰈮",
+			"social": "󰭹",
+			"files": "󰉋",
+			"cinema": "󰿎",
+			"plan": "󰃭",
+			"paint": "󰃣",
+			"games": "󰊗",
+			"record": "󰕧"
+		},
+		"persistent_workspaces": {
+			"*": [ 1, 2 ]
+		},
+		"window-rewrite-default": "",
+		"window-rewrite": {
+			"class<Rofi>": "󱁴",
+			"class<kitty.*>": "",
+			"class<kitty.*> title<sh.*>": "",
+			"class<kitty.*> title<bash.*>": "",
+			"class<kitty.*> title<zsh.*>": "",
+			"class<kitty.*> title<tmux.*>": "",
+			"class<kitty.*> title<python.*>": "󰌠",
+			"class<kitty.*> title<node.*>": "󰎙",
+			"class<kitty.*> title<npm.*>": "󰎙",
+			"class<kitty.*> title<npx.*>": "󰎙",
+			"class<kitty.*> title<vim.*>": "",
+			"class<kitty.*> title<nvim.*>": "",
+			"class<kitty.*> title<vi.*>": "",
+			"class<org.mozilla.firefox>": "",
+			"class<Google-chrome>": "",
+			"class<sublime_text>": "",
+			"class<Code>": "󰨞",
+			"class<Code - OSS>": "󰨞",
+			"class<org.telegram.desktop.*>": "",
+			"class<io.github.tdesktop_x64.TDesktop>": "",
+			"class<nemo>": "󰉋",
+			"class<thunar>": "󰉋",
+			"class<feh>": "",
+			"class<com.interversehq.qView>": "",
+			"class<mpv>": "",
+			"class<vlc>": "󰕼",
+			"class<pinta>": "󰏘",
+			"class<gimp-.*>": ""
+		},
+		"show_special": false,
+		"sort-by": "default",
+		"move-to-monitor": false,
+		"ignore-workspaces": []
+	}
+}

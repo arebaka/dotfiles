@@ -1,0 +1,7 @@
+{
+	"image": {
+		"path": "$HOME/.face",
+		"size": 24,
+		"interval": 3600
+	}
+}
