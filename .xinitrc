@@ -32,3 +32,6 @@ xfsettingsd &
 setxkbmap -option grp:alt_shift_toggle us,ru &
 
 [[ $1 ]] && exec $1
+
+ERRFILE="$XDG_CACHE_HOME"/X11/xsession-errors
+USERXSESSIONRC="$XDG_CACHE_HOME"/X11/xsessionrc

@@ -33,7 +33,7 @@
 !/.config/sxhkd
 !/.config/hypr
 
-!/.gtkrc-2.0
+!/.config/gtk-2.0
 !/.config/gtk-3.0
 !/.config/gtk-4.0
 
@@ -42,6 +42,8 @@
 !/.config/btop
 /.config/btop/btop.log
 !/.config/neofetch
+!/.config/tmux
+
 !/.config/waybar
 !/.config/kitty
 !/.config/rofi

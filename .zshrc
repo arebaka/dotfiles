@@ -1,5 +1,5 @@
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
 setopt auto_param_slash
 setopt hist_ignore_dups
@@ -19,9 +19,9 @@ unsetopt correct_all
 unsetopt always_last_prompt
 unsetopt auto_menu
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 . ~/.zsh/bindkeys.sh
 . ~/.zsh/aliases.sh

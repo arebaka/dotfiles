@@ -91,3 +91,13 @@ alias npms='npm start'
 alias npmt='npm test'
 alias npmu='npm update'
 alias npmv='npm -v'
+
+alias adb='HOME="$XDG_DATA_HOME"/android adb'
+
+alias dosbox=dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf
+alias mocp=mocp -M "$XDG_CONFIG_HOME"/moc
+alias netbeans=netbeans --userdir "$XDG_CONFIG_HOME"/netbeans
+alias pidgin=pidgin --config="$XDG_DATA_HOME"/purple
+alias svn=svn --config-dir "$XDG_CONFIG_HOME"/subversion
+alias wget=wget --hsts-file="$XDG_DATA_HOME"/wget-hsts
+alias nvidia-settings=nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings
