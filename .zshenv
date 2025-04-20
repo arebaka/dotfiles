@@ -3,10 +3,11 @@ append_path () {
         *:"$1":*)
             ;;
         *)
-            PATH="${PATH:+$PATH:}$1"
+			path=($1 $path)
     esac
 }
 
+typeset -U path PATH
 append_path "$HOME/.local/bin"
 append_path "$HOME/go/bin"
 append_path "$HOME/.local/share/gem/ruby/3.3.0/bin"
@@ -53,6 +54,7 @@ export RENPY_PATH_TO_SAVES="$XDG_DATA_HOME"/renpy
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export SQLITE_HISTORY="$XDG_CACHE_HOME"/sqlite_history
 export W3M_DIR="$XDG_DATA_HOME"/w3m
+export REDISCLI_HISTFILE="$XDG_DATA_HOME"/redis/rediscli_history
 
 export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
@@ -60,4 +62,3 @@ export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
 
 export ANDROID_USER_HOME="$HOME"/.android
 export ANDROID_HOME="$HOME"/.android/sdk
-

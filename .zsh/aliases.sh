@@ -11,8 +11,6 @@ alias la='ls -Fa --color=auto'
 alias ll='ls -FlhX --color=auto'
 alias lla='ls -FlahX --color=auto'
 
-alias less='less -MR'
-
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
@@ -91,8 +89,6 @@ alias npms='npm start'
 alias npmt='npm test'
 alias npmu='npm update'
 alias npmv='npm -v'
-
-alias adb='HOME="$XDG_DATA_HOME"/android adb'
 
 alias dosbox=dosbox -conf "$XDG_CONFIG_HOME"/dosbox/dosbox.conf
 alias mocp=mocp -M "$XDG_CONFIG_HOME"/moc

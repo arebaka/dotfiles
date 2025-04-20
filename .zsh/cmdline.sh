@@ -27,11 +27,13 @@ function () {
 	local JOBS=$'%B%1(j.¤ .)%b'
 	local DT=$'%B%D{%c}%b'
 	local DIR=$'%B%F{$CMDCOLOR}%~%b%f'
-	local STATUS=$'%(?..%F{red}%?%B%F{$CMDCOLOR}%k ╟─)'
+	local STATUS=$'%(?..%F{red}[%?]%b%f%k)'
+	local NUMBER=$'%!'
 
 	export PS1="%b%f%k${TL_CORNER}${BAR_BEGIN} ${ID} ${GIT}${BAR_END} ${JOBS}${DT}%0${LF}${BL_CORNER}${DIR} "
 	export PS2="%B%F{$CMDCOLOR}%k> %f%b"
 	export PS3="%B%F{$CMDCOLOR}%k?# %f%b"
 	export PS4="%B%F{$CMDCOLOR}%k+%N:%i> %f%b"
-	export RPS1="$STATUS"
+	export RPS1="${STATUS} ${NUMBER}"
+	export PROMPT_EOL_MARK=''
 }

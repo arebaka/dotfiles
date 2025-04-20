@@ -3,3 +3,5 @@ export LC_NUMERIC=POSIX
 
 export CMDCOLOR=blue
 # export CMDCOLOR=#7d80b8
+
+. ~/.zshrc
