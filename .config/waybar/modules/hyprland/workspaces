@@ -17,11 +17,12 @@
 			"record": "󰕧"
 		},
 		"persistent_workspaces": {
-			"*": [ 1, 2 ]
+			"*": [ "term", "web" ]
 		},
 		"window-rewrite-default": "",
 		"window-rewrite": {
 			"class<Rofi>": "󱁴",
+			"class<swappy>": "󰹑",
 			"class<kitty.*>": "",
 			"class<kitty.*> title<sh.*>": "",
 			"class<kitty.*> title<bash.*>": "",

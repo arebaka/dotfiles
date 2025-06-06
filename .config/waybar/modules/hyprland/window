@@ -33,6 +33,7 @@
 			"(.*) - Sublime Text (UNREGISTERED)": "$1",
 			"(.*) - Visual Studio Code": "$1",
 			"(.*) - Visual Studio Code - OSS": "$1",
+			"(.*) - Thunar": "$1",
 			"(.*) - mpv": "$1",
 			"(.*) - VLC media player": "$1",
 			"(.*) - Медиапроигрыватель VLC": "$1"

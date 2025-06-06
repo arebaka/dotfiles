@@ -29,6 +29,7 @@
 		"rotate": 0,
 		"states": [],
 		"scroll-step": 1.0,
+		"on-click": "~/.script/widget/audio_control.sh",
 		"on-click-right": "~/.script/audio/toggle_mute.sh",
 		"on-scroll-up": "~/.script/audio/raise_volume.sh",
 		"on-scroll-down": "~/.script/audio/lower_volume.sh",

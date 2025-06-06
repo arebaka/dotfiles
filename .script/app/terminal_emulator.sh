@@ -1,2 +1,2 @@
 #!/bin/bash
-exec gio launch /usr/share/applications/kitty.desktop
+exec gio launch /usr/share/applications/kitty.desktop $@

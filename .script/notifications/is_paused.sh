@@ -1,2 +1,2 @@
 #!/bin/bash
-exec test `dunstctl is-paused` == 'true'
+exec makoctl mode | grep do-not-disturb &> /dev/null

@@ -1,2 +1,2 @@
 #!/bin/bash
-exec gio open "$1"
+gio open $@ || gio open ~

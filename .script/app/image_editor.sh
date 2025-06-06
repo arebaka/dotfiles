@@ -1,2 +1,2 @@
 #!/bin/bash
-exec flatpak run com.github.PintaProject.Pinta
+exec gio launch /var/lib/flatpak/exports/share/applications/com.github.PintaProject.Pinta.desktop $@

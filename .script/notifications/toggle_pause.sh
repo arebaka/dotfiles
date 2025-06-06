@@ -1,2 +1,2 @@
 #!/bin/bash
-exec dunstctl set-paused toggle
+exec makoctl mode -t do-not-disturb &> /dev/null

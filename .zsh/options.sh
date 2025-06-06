@@ -47,7 +47,6 @@ setopt pushd_silent
 setopt pushd_to_home
 setopt rc_expand_param
 setopt rcs
-setopt share_history
 setopt short_loops
 setopt unset
 setopt zle
@@ -124,6 +123,7 @@ unsetopt shin_stdin
 unsetopt sh_nullcmd
 unsetopt sh_option_letters
 unsetopt sh_word_split
+unsetopt share_history
 unsetopt single_command
 unsetopt single_line_zle
 unsetopt sun_keyboard_hack

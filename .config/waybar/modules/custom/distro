@@ -2,6 +2,6 @@
 	"custom/distro": {
 		"format": "",
 		"tooltip": false,
-		"on-click": "~/.script/app/launcher.sh"
+		"on-click": "~/.script/widget/drop_terminal_emulator.sh"
 	}
 }

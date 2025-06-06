@@ -5,6 +5,7 @@
 		"format-icons": ["", "", "", "", "", "", "", "", "", "󰃞", "󰃟", "󰃝", "󰃠"],
 		"rotate": 0,
 		"states": [],
+		"on-click": "~/.script/widget/display_control.sh",
 		"on-scroll-up": "~/.script/device/monitor_brightness_up.sh",
 		"on-scroll-down": "~/.script/device/monitor_brightness_down.sh",
 		"reverse-scrolling": true,

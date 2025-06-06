@@ -1,0 +1,11 @@
+"custom/mediaplayer": {
+	"exec": "~/.config/waybar/waybar-mediaplayer/src/mediaplayer monitor",
+	"return-type": "json",
+	"format": "{}",
+	"on-click": "~/.config/waybar/waybar-mediaplayer/src/mediaplayer play-pause",
+	"on-click-right": "~/.config/waybar/waybar-mediaplayer/src/mediaplayer next"
+	"on-scroll-up": "~/.config/waybar/waybar-mediaplayer/src/mediaplayer next",
+	"on-scroll-down": "~/.config/waybar/waybar-mediaplayer/src/mediaplayer previous",
+	"min-length": 20,
+	"max-length": 20
+},

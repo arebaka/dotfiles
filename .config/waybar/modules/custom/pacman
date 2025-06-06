@@ -1,0 +1,13 @@
+{
+	"custom/pacman": {
+		"format": "{icon}{0}",
+		"return-type": "json",
+		"format-icons": {
+			"pending-updates": " ",
+			"updated": ""
+		},
+		"exec-if": "which waybar-updates",
+		"exec": "waybar-updates",
+		"on-click": "~/.script/app/terminal_emulator.sh /usr/bin/yay"
+	}
+}

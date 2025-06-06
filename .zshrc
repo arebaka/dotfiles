@@ -3,7 +3,7 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export HISTFILE="$XDG_CACHE_HOME"/zsh/history
 export HISTSIZE=10000
 export SAVEHIST=10000
 

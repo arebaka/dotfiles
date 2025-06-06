@@ -1,2 +1,2 @@
 #!/bin/bash
-exec kitty --class kitty-dropterm
+exec kitty --class kitty-dropterm $@

@@ -15,6 +15,7 @@
 
 !/.editorconfig
 !/.tmux.conf
+!/.lesskey
 
 !/.vimrc
 !/.vim
@@ -36,6 +37,7 @@
 !/.config/gtk-2.0
 !/.config/gtk-3.0
 !/.config/gtk-4.0
+!/.config/dconf
 
 !/.config/bat
 !/.config/htop
@@ -46,5 +48,6 @@
 
 !/.config/waybar
 !/.config/dunst
+!/.config/mako
 !/.config/kitty
 !/.config/rofi

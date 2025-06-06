@@ -28,13 +28,13 @@ text_icon_padding = 0
 frame_width = 2
 gap_size = 0
 sort = false
-idle_threshold = 120
+idle_threshold = 0
 layer = overlay
 force_xwayland = false
 font = Roboto Regular 11
 line_height = 2
 markup = full
-format = "<b>%a</b>\n%s\n%b"
+format = "<b>%s</b>\n%b\n<sub>%a</sub>"
 alignment = left
 vertical_alignment = center
 show_age_threshold = 60
@@ -44,7 +44,8 @@ stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = true
 icon_position = left
-icon_path = /usr/share/icons/Tela-green-dark/symbolic/status/:/usr/share/icons/Tela-green-dark/symbolic/devices/
+enable_recursive_icon_lookup = true
+icon_theme = Tela-green-dark
 max_icon_size = 50
 sticky_history = true
 history_length = 2000
@@ -64,19 +65,19 @@ override_pause_level = 0
 
 [urgency_low]
 timeout = 2
-background = "#181825"
+background = "#181818"
 foreground = "#ffffff"
 frame_color = "#7d80b8"
 
 [urgency_normal]
 timeout = 5
-background = "#181825"
+background = "#181818"
 foreground = "#ffffff"
 frame_color = "#7d80b0"
 
 [urgency_critical]
 timeout = 0
-background = "#181825"
+background = "#181818"
 foreground = "#ffffff"
 frame_color = "#b87e7d"
 
@@ -88,32 +89,32 @@ history_ignore = yes
 category = "audio.volume"
 set_transient = true
 format = "<b>%n</b>"
-frame_color = "#181825"
+frame_color = "#181818"
 fullscreen = pushback
 
 [audio_muted]
 category = "audio.muted"
 set_transient = true
 format = "Muted"
-frame_color = "#181825"
+frame_color = "#181818"
 fullscreen = pushback
 
 [audio_mic_volume]
 category = "audio.mic_volume"
 set_transient = true
 format = "<b>%n</b>"
-frame_color = "#181825"
+frame_color = "#181818"
 fullscreen = pushback
 
 [audio_mic_muted]
 category = "audio.mic_muted"
 set_transient = true
 format = "Muted"
-frame_color = "#181825"
+frame_color = "#181818"
 fullscreen = pushback
 
 [brightness]
 category = "brightness"
 set_transient = true
 format = "<b>%n</b>"
-frame_color = "#181825"
+frame_color = "#181818"

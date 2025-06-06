@@ -1,6 +1,6 @@
 {
 	"custom/hibernate": {
-		"format": "󰠘",
+		"format": "󰤁",
 		"rotate": 0,
 		"on-click": "~/.script/acpi/hibernate.sh",
 		"escape": false,

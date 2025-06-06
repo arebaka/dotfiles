@@ -1,2 +1,2 @@
 #!/bin/bash
-exec dunstctl count waiting
+exec makoctl list | grep -E ^Notification | wc -l

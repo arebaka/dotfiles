@@ -1,2 +1,2 @@
 #!/bin/bash
-exec flatpak run org.videolan.VLC
+exec gio launch /var/lib/flatpak/exports/share/applications/org.videolan.VLC.desktop

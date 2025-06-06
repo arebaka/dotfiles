@@ -1,19 +1,20 @@
 {
 	"network": {
-		"interface": "wlan0",
-		"interval": 60,
+		//"interface": "wlan0",
+		"interval": 1,
 		"family": "ipv4",
-		"format": "{icon}",
-		"format-ethernet": "󰈀 ",
-		"format-wifi": "󰖩  {signalStrength}%",
-		"format-linked": "󰛳",
-		"format-disconnected": "󰖪 ",
+		"format": "󰖩",
+		"format-ethernet": "󰈀 {bandwidthTotalBits}",
+		"format-wifi": "{icon} {essid}",
+		"format-linked": "󰛳 {bandwidthTotalBits}",
+		"format-disconnected": "󰖪",
 		"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
 		"rotate": 0,
+		"on-click": "~/.script/widget/wifi_control.sh",
 		"tooltip": true,
-		"tooltip-format": "{ifname}: {ipaddr}/{cidr}",
-		"tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} via {gwaddr}",
-		"tooltip-format-wifi": "{essid}: {ipaddr}/{cidr}",
+		"tooltip-format": "{ifname}: {ipaddr}/{cidr} ({bandwidthTotalBits})",
+		"tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} via {gwaddr} ({bandwidthTotalBits})",
+		"tooltip-format-wifi": "{essid} ({signaldBm} dBm): {ipaddr}/{cidr} ({bandwidthTotalBits})",
 		"tooltip-format-disconnected": "Disconnected"
 	}
 }

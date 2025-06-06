@@ -6,4 +6,4 @@ icons=('' '' '' '' '' '' '' '' '' '󰃞' '󰃟' '󰃝
 icon=${icons[$phase]}
 icon_name='brightness-display-symbolic'
 
-exec dunstify -a 'Brightness' -u low -c 'brightness' -i "$icon_name" -h 'string:x-dunst-stack-tag:brightness' -h "int:value:$value" "$icon $value"
+exec dunstify -a 'Brightness' -u low -c 'brightness' -i "$icon_name" -h 'string:x-dunst-stack-tag:brightness' -h "int:value:$value" "$icon  $value"

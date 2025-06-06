@@ -7,7 +7,7 @@
 	border: none;
 	text-shadow: none;
 	box-shadow: none;
-	font-family: Roboto, sans-serif, monospace;
+	font-family: JetBrainsMono Nerd Font, monospace;
 	font-size: 12px;
 }
 
@@ -29,8 +29,6 @@ tooltip {
 .module {
 	margin-top: 10px;
 	background: @bg-color;
-	border-top: 1px solid @fg-color;
-	border-bottom: 1px solid @fg-color;
 }
 
 label.module {
@@ -64,13 +62,28 @@ label.module:hover {
 
 #workspaces {
 	margin-right: 10px;
-	border: 1px solid @fg-color;
-	border-radius: 15px;
+	background: none;
 }
 
 #workspaces button {
 	padding: 0 7px;
+	border-top: 1px solid @fg-color;
+	border-bottom: 1px solid @fg-color;
+	border-radius: 0;
 	color: @text-color;
+	background: @bg-color;
+}
+
+#workspaces button:first-child {
+	border-left: 1px solid @fg-color;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#workspaces button:last-child {
+	border-right: 1px solid @fg-color;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 #workspaces button.active {
@@ -79,22 +92,36 @@ label.module:hover {
 
 #workspaces button:hover {
 	background-color: @accent-bg-color;
+	border-color: @accent-fg-color;
 }
 
 #session {
-	margin: 10px;
-	margin-bottom: 0;
+	margin: 10px 10px 0 10px;
 	min-height: 30px;
-	border-right: 5px solid @fg-color;
-	border-left: 5px solid @fg-color;
-	border-radius: 5px;
 }
 
 #session .module {
 	margin: 0;
 	border-top: 1px solid @fg-color;
 	border-bottom: 1px solid @fg-color;
-	border-radius: 0;
+}
+
+#custom-poweroff {
+	border: 1px solid @fg-color;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#custom-hibernate {
+	border-right: 1px solid @fg-color;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#session .module:hover {
+	border-color: @accent-fg-color;
 }
 
 #custom-poweroff,
@@ -118,21 +145,49 @@ label.module:hover {
 
 #tray {
 	margin-right: 10px;
-	border: 1px solid @fg-color;
-	border-radius: 15px;
 }
 
 #tray menu {
 	padding: 5px 0;
-	color: @text-color;
 	background: @bg-color;
 	border: 1px solid @fg-color;
 	border-radius: 5px;
 }
 
+#tray menu label {
+	font-family: Roboto, sans-serif, monospace;
+	color: @text-color;
+}
+
+#tray menu label:hover {
+	color: @accent-fg-color;
+	background: @accent-bg-color;
+}
+
+#tray > .active,
+#tray > .passive {
+	border-top: 1px solid @fg-color;
+	border-bottom: 1px solid @fg-color;
+	color: @text-color;
+}
+
+#tray > .active:first-child,
+#tray > .passive:first-child {
+	border-left: 1px solid @fg-color;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#tray > .active:last-child,
+#tray > .passive:last-child {
+	border-right: 1px solid @fg-color;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
 #tray > .active:hover,
 #tray > .passive:hover {
 	background: @accent-bg-color;
+	border-color: @accent-fg-color;
 }
 
 #tray image {
@@ -141,36 +196,63 @@ label.module:hover {
 
 #window {
 	background: transparent;
-	border: none;
 }
 
 #window label {
+	font-family: Roboto, sans-serif, monospace;
 	font-size: 11px;
 }
 
 #language {
-	border-left: 1px solid @fg-color;
-	border-top-left-radius: 15px;
-	border-bottom-left-radius: 15px;
+	margin-right: 10px;
+	border: 1px solid @fg-color;
+	border-radius: 5px;
+}
+
+#language:hover {
+	border-color: @accent-fg-color;
 }
 
 #clock {
-	border-right: 1px solid @fg-color;
-	border-top-right-radius: 15px;
-	border-bottom-right-radius: 15px;
+	margin-right: 5px;
+	border: 1px solid @fg-color;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#clock:hover {
+	border-color: @accent-fg-color;
+}
+
+.modules-right label.module {
+	border-top: 1px solid @fg-color;
+	border-bottom: 1px solid @fg-color;
+}
+
+.modules-right label.module:hover {
+	border-color: @accent-fg-color;
 }
 
 #mpris {
+	font-family: Roboto, sans-serif, monospace;
 	font-size: 11px;
 	background: transparent;
 	border: none;
 }
 
 #custom-weather {
-	margin: 10px;
-	margin-bottom: 0;
+	margin-left: 5px;
 	border: 1px solid @fg-color;
-	border-radius: 15px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+#custom-weather:hover {
+	border-color: @accent-fg-color;
 }
 
 #tray > .needs-attention {
@@ -250,13 +332,21 @@ label.module:hover {
 
 #network {
 	border-right: 1px solid @fg-color;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#custom-notifications {
+	margin: 10px 10px 0 10px;
+	border: 1px solid @fg-color;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 	border-top-right-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
 
-#custom-notificator {
-	margin: 10px;
-	margin-bottom: 0;
+#custom-pacman {
+	margin: 10px 0 0 10px;
 	border: 1px solid @fg-color;
-	border-radius: 15px;
+	border-radius: 5px;
 }

@@ -13,9 +13,9 @@
 			"TelegramDesktop": ""
 		},
 		"status-icons": {
-			"playing": "󰐊",
-			"paused": "󰏤",
-			"stopped": "󰓛"
+			"playing": "▶️",
+			"paused": "⏸️",
+			"stopped": "⏹️"
 		},
 		"dynamic-order": ["title", "artist", "album"],
 		"ellipsis": "…",

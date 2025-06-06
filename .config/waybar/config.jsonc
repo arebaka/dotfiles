@@ -3,7 +3,7 @@
 	"position": "top",
 	"mode": "dock",
 	"exclusive": true,
-	"fixed-center": false,
+	"fixed-center": true,
 	"passthrough": false,
 	"ipc": true,
 	"gtk-layer-shell": true,
@@ -12,6 +12,7 @@
 	"spacing": 0,
 	"margin": 0,
 	"reload_style_on_change": true,
+	"font": "JetBrainsMono Nerd Font 10",
 
 	"include": [
 		"~/.config/waybar/modules/tray",
@@ -27,30 +28,31 @@
 		"~/.config/waybar/modules/hyprland/language",
 		"~/.config/waybar/modules/custom/distro",
 		"~/.config/waybar/modules/custom/weather",
-		"~/.config/waybar/modules/custom/notificator",
+		"~/.config/waybar/modules/custom/notifications",
 		"~/.config/waybar/modules/group/session",
 		"~/.config/waybar/modules/group/resources",
-		"~/.config/waybar/modules/custom/mediaplayer"
+		"~/.config/waybar/modules/custom/pacman"
 	],
 
 	"modules-left": [
 		"group/session",
+		"hyprland/language",
 		"tray",
 		"hyprland/workspaces",
 		"hyprland/window"
 	],
 
-	"modules-center": ["hyprland/language", "custom/distro", "clock"],
+	"modules-center": ["clock", "custom/weather"],
 
 	"modules-right": [
 		"mpris",
-		"custom/weather",
 		"pulseaudio",
 		"backlight",
 		"battery",
 		"group/resources",
 		"bluetooth",
 		"network",
-		"custom/notificator"
+		"custom/pacman",
+		"custom/notifications"
 	]
 }

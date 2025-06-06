@@ -1,12 +1,12 @@
 {
-	"custom/notificator": {
+	"custom/notifications": {
 		"exec": "~/.config/waybar/scripts/notifications.sh",
 		"inverval": 2,
 		"return-type": "json",
-		"format": " {icon} ({text})",
+		"format": "{icon} {text}",
 		"format-icons": {
-			"enabled": "",
-			"disabled": ""
+			"enabled": "󰂚",
+			"disabled": "󰂛"
 		},
 		"rotate": 0,
 		"on-click-right": "~/.script/notifications/toggle_pause.sh",
