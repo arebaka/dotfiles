@@ -1,0 +1,34 @@
+#!/bin/bash
+
+. ~/.zshenv
+
+export XDG_SESSION_TYPE=x11
+
+export QT_QPA_PLATFORM=xcb
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+export GDK_SCALE=1
+export GDK_BACKEND=x11
+
+export CLUTTER_BACKEND=x11
+
+export MOZ_ENABLE_WAYLAND=0
+
+export OZONE_PLATFORM=x11
+export ELECTRON_OZONE_PLATFORM_HINT=x11
+
+export XCURSOR_SIZE=24
+export XCURSOR_THEME=Bibata_Ghost
+
+export LANG=ru_RU.UTF-8
+export LC_NUMERIC=POSIX
+
+xrandr --output eDP1 --scale 1.0x1.0
+
+xsetroot -cursor_name left_ptr
+
+setxkbmap \
+	-layout us,ru \
+	-model pc105 \
+	-option ctrl:nocaps,grp:alt_shift_toggle,grp_led:caps,lv3:ralt_switch,altwin:meta_alt,compose:rctrl,numpad:pc,nbsp:level3,terminate:ctrl_alt_bksp

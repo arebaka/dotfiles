@@ -1,37 +1,42 @@
 #!/bin/bash
 
-if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]
-then eval "$(dbus-launch --sh-syntax --exit-with-session)"
+xset b off
+xset +dpms
+xset dpms 300 600 900
+xset led off
+xset m 4/1 0
+xset r 600 25
+xset s 600 10
+
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+	eval "$(dbus-launch --sh-syntax --exit-with-session)"
 fi
 
-if [ -d /etc/X11/xinit/xinitrc.d ]
-then
-	for f in /etc/X11/xinit/xinitrc.d/?*.sh
-	do [ -x "$f" ] && . "$f"
+if [ -f ~/.Xresources ]; then
+	if [ -x /usr/bin/cpp ]; then
+		xrdb -merge ~/.Xresources
+	else
+		xrdb -nocpp -merge ~/.Xresources
+	fi
+fi
+
+if [ -f ~/.Xmodmap ]; then
+	xmodmap ~/.Xmodmap
+fi
+
+if [ -f ~/.xinputrc ]; then
+	. ~/.xinputrc
+fi
+
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+	for f in /etc/X11/xinit/xinitrc.d/?*.sh; do
+		[ -x "$f" ] && . "$f"
 	done
 	unset f
 fi
 
-for i in /usr/share/fonts/*
-do xset +fp $i
-done
+if [ -f ~/.xprofile ]; then
+	. ~/.xprofile
+fi
 
-xrdb merge .Xresources
-fc-cache -fv
-
-xset fp rehash
-xset b off
-xset c on
-xset +dpms
-xset k
-xset led on
-xset r on
-
-xsetroot -cursor_name left_ptr &
-xfsettingsd &
-setxkbmap -option grp:alt_shift_toggle us,ru &
-
-[[ $1 ]] && exec $1
-
-ERRFILE="$XDG_CACHE_HOME"/X11/xsession-errors
-USERXSESSIONRC="$XDG_CACHE_HOME"/X11/xsessionrc
+[[ $1 ]] && exec $1 || exec i3

@@ -30,6 +30,12 @@
 !/.config/user-dirs.dirs
 !/.config/user-dirs.locale
 
+!/.xinitrc
+!/.xinputrc
+!/.xprofile
+!/.Xresources
+!/.Xmodmap
+
 !/.config/bspwm
 !/.config/sxhkd
 !/.config/hypr
