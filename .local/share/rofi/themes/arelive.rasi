@@ -1,0 +1,204 @@
+* {
+	font:      "Roboto Regular 12";
+    highlight: bold italic;
+    scrollbar: true;
+
+    fg-color:             #7d80b8;
+    bg-color:             #181818;
+	accent-text-color:    #ffffff;
+	accent-fg-color:      #a5a9f3;
+	accent-bg-color:      #232438;
+	insentive-text-color: #60628d;
+	insentive-fg-color:   #4e4e63;
+	insentive-bg-color:   #111111;
+	extra-text-color:     #ffffff;
+	extra-fg-color:       #f3e4a5;
+	extra-bg-color:       #202020;
+	success-color:        #7db890;
+	error-color:          #b87e7d;
+	warning-color:        #b8ac79;
+	alert-color:          #b87e7d;
+
+	spacing:          0;
+	margin:           0;
+	padding:          0;
+	border:           0;
+	border-radius:    0;
+	text-color:       #ffffff;
+    border-color:     @fg-color;
+	background-color: @bg-color;
+}
+
+window {
+	transparency:  "real";
+	location:      center;
+	anchor:        center;
+	fullscreen:    false;
+	padding:       10px;
+	border-radius: 5px;
+}
+
+mainbox {
+	orientation:   vertical;
+	border-radius: 5px;
+	children:      [ inputbar, message, listview ];
+}
+
+inputbar {
+	orientation:      horizontal;
+	margin:           0 0 10px 0;
+    padding:          5px;
+	background-color: @accent-bg-color;
+	border-radius:    5px;
+    children:         [ entry, num-filtered-rows, textbox-fr-ns-separator, num-rows, case-indicator ];
+}
+
+prompt,
+entry,
+num-filtered-rows,
+textbox-fr-ns-separator,
+num-rows,
+case-indicator {
+	vertical-align:   0.5;
+	horizontal-align: 0.0;
+	background-color: transparent;
+}
+
+prompt {
+	markup: true;
+}
+
+entry {
+	margin:               0 10px 0 0;
+	padding:              5px;
+	font-size:            20px;
+	placeholder:          "Search";
+	placeholder-markup:   true;
+	placeholder-color:    @insentive-text-color;
+	blink:                true;
+	markup:               false;
+	cursor-width:         2px;
+	cursor-color:         @text-color;
+	hide-cursor-on-empty: true;
+	cursor-outline:       true;
+	cursor-outline-width: 1px;
+	cursor-outline-color: @fg-color;
+	height: 100px;
+}
+
+textbox-fr-ns-separator {
+	expand:  false;
+	content: "/";
+}
+
+message {
+    padding:          5px 10px;
+	vertical-align:   0.5;
+	horizontal-align: 0.0;
+    border:           1px 0 0 solid;
+}
+
+textbox {
+	vertical-align: 0.5;
+	horizontal-align: 0.0;
+	markup: true;
+}
+
+listview {
+    padding:       5px;
+    border:        1px solid;
+	border-radius: 5px;
+    scrollbar:     true;
+}
+
+scrollbar {
+	margin:                 0 0 0 5px;
+	background-color:       @accent-bg-color;
+    handle-width:           10px;
+	handle-color:           @fg-color;
+	handle-rounded-corners: true;
+}
+
+element {
+	spacing: 5px;
+    padding: 5px;
+}
+
+element-text,
+element-icon {
+    text-color:       inherit;
+    background-color: inherit;
+}
+
+element.normal.normal {
+	text-color:       @text-color;
+    background-color: @bg-color;
+}
+
+element.normal.urgent {
+    text-color:       @alert-color;
+    background-color: @bg-color;
+}
+
+element.normal.active {
+    text-color:         @text-color;
+    background-color:   @bg-color;
+	text-outline:       true;
+	text-outline-width: 5px;
+	text-outline-color: @fg-color;
+}
+
+element.selected.normal {
+    text-color:       @extra-text-color;
+    background-color: @fg-color;
+}
+
+element.selected.urgent {
+    text-color:       @alert-color;
+    background-color: @fg-color;
+}
+
+element.selected.active {
+    text-color:         @extra-text-color;
+    background-color:   @fg-color;
+	text-outline:       true;
+	text-outline-width: 5px;
+	text-outline-color: @fg-color;
+}
+
+element.alternate.normal {
+    text-color:       @text-color;
+    background-color: @extra-bg-color;
+}
+
+element.alternate.urgent {
+    text-color:       @alert-color;
+    background-color: @extra-bg-color;
+}
+
+element.alternate.active {
+    text-color:         @fg-color;
+    background-color:   @extra-bg-color;
+	text-outline:       true;
+	text-outline-width: 5px;
+	text-outline-color: @fg-color;
+}
+
+mode-switcher {
+	orientation: horizontal;
+    border:      1px 0 0 solid;
+}
+
+button {
+	padding:          5px;
+	text-color:       @text-color;
+	background-color: @bg-color;
+	border:           1px solid;
+	border-radius:    5px;
+}
+
+button.selected {
+    text-color:       @extra-text-color;
+    background-color: @fg-color;
+}
+
